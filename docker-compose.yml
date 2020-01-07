@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  #App
+  app:
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    working_dir: /var/www
+  
+  #Webserver    
+  web:
+    build:
+      context: ./
+      dockerfile: web.dockerfile
+    working_dir: /var/www
+    volumes:
+      - ./demixer:/var/www      
+    ports:
+      - 8080:80
