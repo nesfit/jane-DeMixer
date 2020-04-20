@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Console\Kernel" namespace="App\Console" name="Kernel" abstract="false" final="false" start="8" end="42">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Console" file="Kernel.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Console/Kernel.php" size="848" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="cd91585cead4e037d4b0d4fcc5ee3605b0c5bb7c" relative="Console/Kernel.php"/>
+  <extends full="Illuminate\Foundation\Console\Kernel" namespace="Illuminate\Foundation\Console" name="Kernel" unresolved="true"/>
+  <member name="commands" default="" type="array" visibility="protected" static="false" line="15">
+    <docblock>
+      <description compact="The Artisan commands provided by your application."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <method name="schedule" start="25" end="29" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Define the application's command schedule."/>
+      <param type="object" variable="$schedule">
+        <type full="\Illuminate\Console\Scheduling\Schedule" namespace="\Illuminate\Console\Scheduling" name="Schedule"/>
+      </param>
+      <return type="object">
+        <type full="App\Console\void" namespace="App\Console" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="schedule" byreference="false" type="object">
+      <type full="Illuminate\Console\Scheduling\Schedule" namespace="Illuminate\Console\Scheduling" name="Schedule"/>
+    </parameter>
+    <inline>
+      <comment value="$schedule-&gt;command('inspire')" line="27"/>
+      <comment value="-&gt;hourly();" line="28"/>
+    </inline>
+  </method>
+  <method name="commands" start="36" end="41" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Register the commands for the application."/>
+      <return type="object">
+        <type full="App\Console\void" namespace="App\Console" name="void"/>
+      </return>
+    </docblock>
+  </method>
+</class>

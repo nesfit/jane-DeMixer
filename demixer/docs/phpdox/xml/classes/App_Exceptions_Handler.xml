@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Exceptions\Handler" namespace="App\Exceptions" name="Handler" abstract="false" final="false" start="8" end="51">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Exceptions" file="Handler.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Exceptions/Handler.php" size="1058" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="96a89a0f03747fc5f35b9c291106924a92c3236e" relative="Exceptions/Handler.php"/>
+  <extends full="Illuminate\Foundation\Exceptions\Handler" namespace="Illuminate\Foundation\Exceptions" name="Handler" unresolved="true"/>
+  <member name="dontReport" default="" type="array" visibility="protected" static="false" line="15">
+    <docblock>
+      <description compact="A list of the exception types that are not reported."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="dontFlash" default="" type="array" visibility="protected" static="false" line="24">
+    <docblock>
+      <description compact="A list of the inputs that are never flashed for validation exceptions."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <method name="report" start="35" end="38" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Report or log an exception."/>
+      <param type="object" variable="$exception">
+        <type full="\Exception" namespace="" name="Exception"/>
+      </param>
+      <return type="object">
+        <type full="App\Exceptions\void" namespace="App\Exceptions" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="exception" byreference="false" type="object">
+      <type full="Exception" namespace="" name="Exception"/>
+    </parameter>
+  </method>
+  <method name="render" start="47" end="50" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Render an exception into an HTTP response."/>
+      <param type="object" variable="$request">
+        <type full="\Illuminate\Http\Request" namespace="\Illuminate\Http" name="Request"/>
+      </param>
+      <param type="object" variable="$exception">
+        <type full="\Exception" namespace="" name="Exception"/>
+      </param>
+      <return type="object">
+        <type full="\Illuminate\Http\Response" namespace="\Illuminate\Http" name="Response"/>
+      </return>
+    </docblock>
+    <parameter name="request" byreference="false" type="{unknown}"/>
+    <parameter name="exception" byreference="false" type="object">
+      <type full="Exception" namespace="" name="Exception"/>
+    </parameter>
+  </method>
+</class>

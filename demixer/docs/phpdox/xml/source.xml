@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="E:/GitHub/jane-DeMixer/demixer/app">
+    <dir name="Console">
+      <file name="Kernel.php" size="848" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="cd91585cead4e037d4b0d4fcc5ee3605b0c5bb7c" xml="tokens/Console/Kernel.php.xml"/>
+    </dir>
+    <dir name="Demixer">
+      <file name="BestMixerDemixer.php" size="21341" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="fcfa8a3a4c0ca972a1e68e1990e23df768f22807" xml="tokens/Demixer/BestMixerDemixer.php.xml"/>
+      <file name="BestMixerLTCDemixer.php" size="698" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="13e2a38a517025efc9efbcabb3c1ec5f3e50a08c" xml="tokens/Demixer/BestMixerLTCDemixer.php.xml"/>
+      <file name="BlockchainClient.php" size="3073" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="bc1d738e6f0ec76170cd4e159d145b68f29b6b4d" xml="tokens/Demixer/BlockchainClient.php.xml"/>
+      <dir name="Clustering">
+        <file name="ClusterInfo.php" size="1526" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="bfbb5756dea4ff8dffe37719e0961ec7c7307511" xml="tokens/Demixer/Clustering/ClusterInfo.php.xml"/>
+        <file name="ClusteringClient.php" size="453" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="38eba21f4ce02c2491140003c0ec155c7933eec6" xml="tokens/Demixer/Clustering/ClusteringClient.php.xml"/>
+        <file name="TarzanClient.php" size="1789" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="cb82c097c67516b4c73c47a19abbbf83748ba43a" xml="tokens/Demixer/Clustering/TarzanClient.php.xml"/>
+        <file name="WalletExplorerClient.php" size="5095" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="60c547e0e0ff43324467e706f0dd00e8d245940c" xml="tokens/Demixer/Clustering/WalletExplorerClient.php.xml"/>
+      </dir>
+    </dir>
+    <dir name="Exceptions">
+      <file name="Handler.php" size="1058" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="96a89a0f03747fc5f35b9c291106924a92c3236e" xml="tokens/Exceptions/Handler.php.xml"/>
+    </dir>
+    <dir name="Http">
+      <dir name="Controllers">
+        <dir name="Auth">
+          <file name="ForgotPasswordController.php" size="834" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="6cfb39d8c4a13296df0b8a02c15db3df24d1a9d8" xml="tokens/Http/Controllers/Auth/ForgotPasswordController.php.xml"/>
+          <file name="LoginController.php" size="943" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="19554eac6a3d88eb8f1444e5ba75ff66a626202f" xml="tokens/Http/Controllers/Auth/LoginController.php.xml"/>
+          <file name="RegisterController.php" size="1891" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="9740011a22631f996f025455015d7f7e40bfbe5b" xml="tokens/Http/Controllers/Auth/RegisterController.php.xml"/>
+          <file name="ResetPasswordController.php" size="952" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="92fc4d9265b3294778e91cd5c42eaa97a3a0e65d" xml="tokens/Http/Controllers/Auth/ResetPasswordController.php.xml"/>
+          <file name="VerificationController.php" size="1071" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="f4b634dda86668f47c6d6f2d2663cef93e79fe43" xml="tokens/Http/Controllers/Auth/VerificationController.php.xml"/>
+        </dir>
+        <file name="Controller.php" size="361" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="080a728cc40011ab4c4a68d88e221ed8a577d562" xml="tokens/Http/Controllers/Controller.php.xml"/>
+        <file name="DemixerController.php" size="3256" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="3ba70ba6b3547c757e65d494b6355f31aa735350" xml="tokens/Http/Controllers/DemixerController.php.xml"/>
+      </dir>
+      <file name="Kernel.php" size="2823" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="0e10fc02e20a98c84ddf5bb72d4ec9d88d5b9f37" xml="tokens/Http/Kernel.php.xml"/>
+      <dir name="Middleware">
+        <file name="Authenticate.php" size="464" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="296d638e7ef4a8c705dd1a28c1f4b5614cb9aa1b" xml="tokens/Http/Middleware/Authenticate.php.xml"/>
+        <file name="CheckForMaintenanceMode.php" size="335" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="895a59c64cdf100b61e594a606f407c587b4c719" xml="tokens/Http/Middleware/CheckForMaintenanceMode.php.xml"/>
+        <file name="EncryptCookies.php" size="294" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="6076ea9a9b9b300ebd0a2cc979c79fb7cb11569d" xml="tokens/Http/Middleware/EncryptCookies.php.xml"/>
+        <file name="RedirectIfAuthenticated.php" size="523" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="99e1fc9d7e220277912272b3998b2410742308d7" xml="tokens/Http/Middleware/RedirectIfAuthenticated.php.xml"/>
+        <file name="TrimStrings.php" size="340" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="e5b0f4959d4441b5c5dada8ba5ca539bb3e13d3b" xml="tokens/Http/Middleware/TrimStrings.php.xml"/>
+        <file name="TrustProxies.php" size="436" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="5f6ed7b8ffdafa78827b1b2dc00e5757b8d0b22c" xml="tokens/Http/Middleware/TrustProxies.php.xml"/>
+        <file name="VerifyCsrfToken.php" size="463" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="70eb8af1992cda6f413a14ceb6495f1fbdec4936" xml="tokens/Http/Middleware/VerifyCsrfToken.php.xml"/>
+      </dir>
+    </dir>
+    <dir name="Providers">
+      <file name="AppServiceProvider.php" size="403" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="3ac3cc2d51ad9ac8a87692c3107fc1813b310714" xml="tokens/Providers/AppServiceProvider.php.xml"/>
+      <file name="AuthServiceProvider.php" size="578" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="afaf1f01afe29d9a4bcc7d93c2f8d873a2fdc897" xml="tokens/Providers/AuthServiceProvider.php.xml"/>
+      <file name="BroadcastServiceProvider.php" size="380" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="b10849da9343ef9ce146dd3de8ea0527d4c8fb86" xml="tokens/Providers/BroadcastServiceProvider.php.xml"/>
+      <file name="EventServiceProvider.php" size="710" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="3e6e016b90e90ee1d36b64e78bd9f3a7cb09f063" xml="tokens/Providers/EventServiceProvider.php.xml"/>
+      <file name="RouteServiceProvider.php" size="1529" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="f63ca296b61e5db05dfb09cd363884a0673cd06b" xml="tokens/Providers/RouteServiceProvider.php.xml"/>
+    </dir>
+    <file name="User.php" size="734" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="a3506f4eb703b3c154f05ee3c6c9e3fb72bdea06" xml="tokens/User.php.xml"/>
+  </dir>
+</source>

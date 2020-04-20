@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Demixer\Clustering\TarzanClient" namespace="App\Demixer\Clustering" name="TarzanClient" abstract="false" final="false" start="16" end="65">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Demixer/Clustering" file="TarzanClient.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Demixer/Clustering/TarzanClient.php" size="1789" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="cb82c097c67516b4c73c47a19abbbf83748ba43a" relative="Demixer/Clustering/TarzanClient.php"/>
+  <extends full="App\Demixer\Clustering\ClusteringClient" namespace="App\Demixer\Clustering" name="ClusteringClient"/>
+  <member name="currency" visibility="private" static="false" line="18"/>
+  <constructor name="__construct" start="20" end="22" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="currency" byreference="false" type="string" default="'btc'"/>
+  </constructor>
+  <method name="getRequestURL" start="24" end="26" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+    <parameter name="request" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterInfo" start="28" end="34" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="sendRequest" start="36" end="47" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+    <parameter name="request" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterAddresses" start="49" end="51" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterTxs" start="53" end="56" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterInTxs" start="58" end="60" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterOutTxs" start="62" end="64" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="App\Demixer\Clustering\ClusteringClient" namespace="App\Demixer\Clustering" name="ClusteringClient">
+    <method name="getClusterAddresses" start="12" end="12" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getClusterTxs" start="14" end="14" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getClusterInTxs" start="15" end="15" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getClusterOutTxs" start="16" end="16" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

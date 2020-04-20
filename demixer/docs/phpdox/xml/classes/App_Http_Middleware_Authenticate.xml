@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Http\Middleware\Authenticate" namespace="App\Http\Middleware" name="Authenticate" abstract="false" final="false" start="7" end="21">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Http/Middleware" file="Authenticate.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Http/Middleware/Authenticate.php" size="464" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="296d638e7ef4a8c705dd1a28c1f4b5614cb9aa1b" relative="Http/Middleware/Authenticate.php"/>
+  <extends full="Illuminate\Auth\Middleware\Authenticate" namespace="Illuminate\Auth\Middleware" name="Authenticate" unresolved="true"/>
+  <method name="redirectTo" start="15" end="20" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Get the path the user should be redirected to when they are not authenticated."/>
+      <param type="object" variable="$request">
+        <type full="\Illuminate\Http\Request" namespace="\Illuminate\Http" name="Request"/>
+      </param>
+      <return type="string"/>
+    </docblock>
+    <parameter name="request" byreference="false" type="{unknown}"/>
+  </method>
+</class>

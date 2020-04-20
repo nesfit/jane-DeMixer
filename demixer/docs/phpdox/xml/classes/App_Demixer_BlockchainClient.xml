@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Demixer\BlockchainClient" namespace="App\Demixer" name="BlockchainClient" abstract="false" final="false" start="14" end="103">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Demixer" file="BlockchainClient.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Demixer/BlockchainClient.php" size="3073" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="bc1d738e6f0ec76170cd4e159d145b68f29b6b4d" relative="Demixer/BlockchainClient.php"/>
+  <member name="currency" visibility="private" static="false" line="16"/>
+  <method name="getCurrency" start="18" end="18" abstract="false" final="false" static="false" visibility="public"/>
+  <constructor name="__construct" start="21" end="23" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="currency" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="getRequestURL" start="25" end="31" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="currency" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getRawTransactionJSON" start="33" end="48" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="txid" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Get data about the user-inputted transaction" line="34"/>
+    </inline>
+  </method>
+  <method name="getTXOutputs" start="50" end="54" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="txid" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTXOutputsFromJSON" start="56" end="68" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="rawtx" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTXInputsFromJSON" start="70" end="84" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="rawtx" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTxInfo" start="86" end="102" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="txid" byreference="false" type="{unknown}"/>
+  </method>
+</class>

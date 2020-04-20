@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="E:/GitHub/jane-DeMixer/demixer/app">
+  <namespace name="App\Console">
+    <class name="Kernel" src="Console/Kernel.php" xml="classes/App_Console_Kernel.xml"/>
+  </namespace>
+  <namespace name="App\Demixer">
+    <class name="BestMixerDemixer" src="Demixer/BestMixerDemixer.php" xml="classes/App_Demixer_BestMixerDemixer.xml"/>
+    <class name="BestMixerLTCDemixer" src="Demixer/BestMixerLTCDemixer.php" xml="classes/App_Demixer_BestMixerLTCDemixer.xml"/>
+    <class name="BlockchainClient" src="Demixer/BlockchainClient.php" xml="classes/App_Demixer_BlockchainClient.xml"/>
+  </namespace>
+  <namespace name="App\Demixer\Clustering">
+    <class name="ClusterInfo" src="Demixer/Clustering/ClusterInfo.php" xml="classes/App_Demixer_Clustering_ClusterInfo.xml"/>
+    <class name="ClusteringClient" src="Demixer/Clustering/ClusteringClient.php" xml="classes/App_Demixer_Clustering_ClusteringClient.xml"/>
+    <class name="TarzanClient" src="Demixer/Clustering/TarzanClient.php" xml="classes/App_Demixer_Clustering_TarzanClient.xml"/>
+    <class name="WalletExplorerClient" src="Demixer/Clustering/WalletExplorerClient.php" xml="classes/App_Demixer_Clustering_WalletExplorerClient.xml"/>
+  </namespace>
+  <namespace name="App\Exceptions">
+    <class name="Handler" src="Exceptions/Handler.php" xml="classes/App_Exceptions_Handler.xml"/>
+  </namespace>
+  <namespace name="App\Http\Controllers\Auth">
+    <class name="ForgotPasswordController" src="Http/Controllers/Auth/ForgotPasswordController.php" xml="classes/App_Http_Controllers_Auth_ForgotPasswordController.xml"/>
+    <class name="LoginController" src="Http/Controllers/Auth/LoginController.php" xml="classes/App_Http_Controllers_Auth_LoginController.xml"/>
+    <class name="RegisterController" src="Http/Controllers/Auth/RegisterController.php" xml="classes/App_Http_Controllers_Auth_RegisterController.xml"/>
+    <class name="ResetPasswordController" src="Http/Controllers/Auth/ResetPasswordController.php" xml="classes/App_Http_Controllers_Auth_ResetPasswordController.xml"/>
+    <class name="VerificationController" src="Http/Controllers/Auth/VerificationController.php" xml="classes/App_Http_Controllers_Auth_VerificationController.xml"/>
+  </namespace>
+  <namespace name="App\Http\Controllers">
+    <class name="Controller" src="Http/Controllers/Controller.php" xml="classes/App_Http_Controllers_Controller.xml"/>
+    <class name="DemixerController" src="Http/Controllers/DemixerController.php" xml="classes/App_Http_Controllers_DemixerController.xml"/>
+  </namespace>
+  <namespace name="App\Http">
+    <class name="Kernel" src="Http/Kernel.php" xml="classes/App_Http_Kernel.xml"/>
+  </namespace>
+  <namespace name="App\Http\Middleware">
+    <class name="Authenticate" src="Http/Middleware/Authenticate.php" xml="classes/App_Http_Middleware_Authenticate.xml"/>
+    <class name="CheckForMaintenanceMode" src="Http/Middleware/CheckForMaintenanceMode.php" xml="classes/App_Http_Middleware_CheckForMaintenanceMode.xml"/>
+    <class name="EncryptCookies" src="Http/Middleware/EncryptCookies.php" xml="classes/App_Http_Middleware_EncryptCookies.xml"/>
+    <class name="RedirectIfAuthenticated" src="Http/Middleware/RedirectIfAuthenticated.php" xml="classes/App_Http_Middleware_RedirectIfAuthenticated.xml"/>
+    <class name="TrimStrings" src="Http/Middleware/TrimStrings.php" xml="classes/App_Http_Middleware_TrimStrings.xml"/>
+    <class name="TrustProxies" src="Http/Middleware/TrustProxies.php" xml="classes/App_Http_Middleware_TrustProxies.xml"/>
+    <class name="VerifyCsrfToken" src="Http/Middleware/VerifyCsrfToken.php" xml="classes/App_Http_Middleware_VerifyCsrfToken.xml"/>
+  </namespace>
+  <namespace name="App\Providers">
+    <class name="AppServiceProvider" src="Providers/AppServiceProvider.php" xml="classes/App_Providers_AppServiceProvider.xml"/>
+    <class name="AuthServiceProvider" src="Providers/AuthServiceProvider.php" xml="classes/App_Providers_AuthServiceProvider.xml"/>
+    <class name="BroadcastServiceProvider" src="Providers/BroadcastServiceProvider.php" xml="classes/App_Providers_BroadcastServiceProvider.xml"/>
+    <class name="EventServiceProvider" src="Providers/EventServiceProvider.php" xml="classes/App_Providers_EventServiceProvider.xml"/>
+    <class name="RouteServiceProvider" src="Providers/RouteServiceProvider.php" xml="classes/App_Providers_RouteServiceProvider.xml"/>
+  </namespace>
+  <namespace name="App">
+    <class name="User" src="User.php" xml="classes/App_User.xml"/>
+  </namespace>
+</index>

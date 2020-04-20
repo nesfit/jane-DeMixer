@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Demixer\BestMixerDemixer" namespace="App\Demixer" name="BestMixerDemixer" abstract="false" final="false" start="10" end="488">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Demixer" file="BestMixerDemixer.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Demixer/BestMixerDemixer.php" size="21341" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="fcfa8a3a4c0ca972a1e68e1990e23df768f22807" relative="Demixer/BestMixerDemixer.php"/>
+  <member name="bc_client" visibility="protected" static="false" line="13"/>
+  <member name="cluster_client" visibility="protected" static="false" line="14"/>
+  <member name="min_output_addrs" visibility="protected" static="false" line="15"/>
+  <member name="max_output_addrs" visibility="protected" static="false" line="16"/>
+  <member name="min_service_fee" visibility="protected" static="false" line="17"/>
+  <member name="max_service_fee" visibility="protected" static="false" line="18"/>
+  <member name="min_miner_fee" visibility="protected" static="false" line="19"/>
+  <member name="max_miner_fee" visibility="protected" static="false" line="20"/>
+  <member name="min_delay" visibility="protected" static="false" line="21"/>
+  <member name="max_delay" visibility="protected" static="false" line="22"/>
+  <constructor name="__construct" start="25" end="37" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="bc_client" byreference="false" type="{unknown}"/>
+    <parameter name="clust_client" byreference="false" type="{unknown}"/>
+    <parameter name="min_output_addrs" byreference="false" type="integer" default="1"/>
+    <parameter name="max_output_addrs" byreference="false" type="integer" default="10"/>
+    <parameter name="min_service_fee" byreference="false" type="integer" default="1"/>
+    <parameter name="max_service_fee" byreference="false" type="integer" default="4"/>
+    <parameter name="min_miner_fee" byreference="false" type="integer" default="0"/>
+    <parameter name="max_miner_fee" byreference="false" type="float" default="0.0004"/>
+    <parameter name="min_delay" byreference="false" type="integer" default="0"/>
+    <parameter name="max_delay" byreference="false" type="integer" default="72"/>
+  </constructor>
+  <method name="reinitialize" start="40" end="49" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="min_output_addrs" byreference="false" type="{unknown}"/>
+    <parameter name="max_output_addrs" byreference="false" type="{unknown}"/>
+    <parameter name="min_service_fee" byreference="false" type="{unknown}"/>
+    <parameter name="max_service_fee" byreference="false" type="{unknown}"/>
+    <parameter name="min_miner_fee" byreference="false" type="{unknown}"/>
+    <parameter name="max_miner_fee" byreference="false" type="{unknown}"/>
+    <parameter name="min_delay" byreference="false" type="{unknown}"/>
+    <parameter name="max_delay" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="recursiveCompare" start="52" end="77" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="txlist" byreference="false" type="{unknown}"/>
+    <parameter name="cur_index" byreference="false" type="{unknown}"/>
+    <parameter name="target_amount" byreference="false" type="{unknown}"/>
+    <parameter name="cur_amount" byreference="false" type="{unknown}"/>
+    <parameter name="max_level" byreference="false" type="{unknown}"/>
+    <parameter name="cur_level" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTransactionOutputs" start="79" end="149" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="txid" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Get data about the user-entered transaction" line="81"/>
+      <comment value="Finding the cluster address among the outputs" line="90"/>
+      <comment value="Check if cluster address could be determined" line="105"/>
+      <comment value="Storing cluster info locally to minimize requests" line="110"/>
+      <comment value="Creating list of transactions that have to be searched - for finding output" line="115"/>
+      <comment value="Searching the transactions for matches (gradually for 1 to N output addresses)" line="135"/>
+    </inline>
+  </method>
+  <method name="getTransactionInput" start="151" end="262" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="txid_outs" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Summary output transaction based on all known outputs" line="154"/>
+    </inline>
+  </method>
+  <method name="pruneAddressesOverAmount" start="264" end="272" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="amount" byreference="false" type="{unknown}"/>
+    <parameter name="addresslist" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTransactionAll" start="274" end="486" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="txid_in" byreference="false" type="{unknown}"/>
+    <parameter name="txid_outs" byreference="false" type="{unknown}"/>
+    <parameter name="out_count" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Parsing output transactions" line="286"/>
+      <comment value="Summary output transaction based on all known outputs" line="290"/>
+      <comment value="Parsing input transaction" line="358"/>
+    </inline>
+  </method>
+  <extenders>
+    <extender full="App\Demixer\BestMixerLTCDemixer" namespace="App\Demixer" name="BestMixerLTCDemixer"/>
+  </extenders>
+</class>

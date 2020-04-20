@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Http\Kernel" namespace="App\Http" name="Kernel" abstract="false" final="false" start="7" end="80">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Http" file="Kernel.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Http/Kernel.php" size="2823" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="0e10fc02e20a98c84ddf5bb72d4ec9d88d5b9f37" relative="Http/Kernel.php"/>
+  <extends full="Illuminate\Foundation\Http\Kernel" namespace="Illuminate\Foundation\Http" name="Kernel" unresolved="true"/>
+  <member name="middleware" default="" type="array" visibility="protected" static="false" line="16">
+    <docblock>
+      <description compact="The application's global HTTP middleware stack.">These middleware are run during every request to your application.</description>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="middlewareGroups" default="" type="array" visibility="protected" static="false" line="29">
+    <docblock>
+      <description compact="The application's route middleware groups."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="routeMiddleware" default="" type="array" visibility="protected" static="false" line="53">
+    <docblock>
+      <description compact="The application's route middleware.">These middleware may be assigned to groups or used individually.</description>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="middlewarePriority" default="" type="array" visibility="protected" static="false" line="72">
+    <docblock>
+      <description compact="The priority-sorted list of middleware.">This forces non-global middleware to always be in the given order.</description>
+      <var type="array"/>
+    </docblock>
+  </member>
+</class>

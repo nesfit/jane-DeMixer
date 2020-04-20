@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Demixer\Clustering\WalletExplorerClient" namespace="App\Demixer\Clustering" name="WalletExplorerClient" abstract="false" final="false" start="16" end="150">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Demixer/Clustering" file="WalletExplorerClient.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Demixer/Clustering/WalletExplorerClient.php" size="5095" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="60c547e0e0ff43324467e706f0dd00e8d245940c" relative="Demixer/Clustering/WalletExplorerClient.php"/>
+  <extends full="App\Demixer\Clustering\ClusteringClient" namespace="App\Demixer\Clustering" name="ClusteringClient"/>
+  <member name="currency" visibility="private" static="false" line="18"/>
+  <member name="client" visibility="private" static="false" line="19"/>
+  <constructor name="__construct" start="21" end="24" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="currency" byreference="false" type="string" default="'btc'"/>
+  </constructor>
+  <method name="getClusterInfo" start="26" end="39" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterAddresses" start="41" end="44" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterTxs" start="46" end="55" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterInTxs" start="57" end="65" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterOutTxs" start="67" end="75" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getClusterID" start="78" end="84" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="body" byreference="false" type="{unknown}"/>
+    <inline>
+      <todo value="" line="81"/>
+    </inline>
+  </method>
+  <method name="getClusterResponse" start="86" end="90" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="address" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="extractClusterAddresses" start="92" end="111" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="cluster_id" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Getting list of addresses from the page" line="94"/>
+    </inline>
+  </method>
+  <method name="extractTransactionsFromPage" start="113" end="121" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="body" byreference="false" type="{unknown}"/>
+    <parameter name="input_txs" byreference="true" type="{unknown}"/>
+    <parameter name="output_txs" byreference="true" type="{unknown}"/>
+  </method>
+  <method name="getServerURL" start="123" end="125" abstract="false" final="false" static="false" visibility="private"/>
+  <method name="extractInputOutputTransactions" start="127" end="149" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="body" byreference="false" type="{unknown}"/>
+    <parameter name="input_txs" byreference="true" type="{unknown}"/>
+    <parameter name="output_txs" byreference="true" type="{unknown}"/>
+  </method>
+  <parent full="App\Demixer\Clustering\ClusteringClient" namespace="App\Demixer\Clustering" name="ClusteringClient">
+    <method name="getClusterAddresses" start="12" end="12" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getClusterTxs" start="14" end="14" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getClusterInTxs" start="15" end="15" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getClusterOutTxs" start="16" end="16" abstract="true" final="false" static="false" visibility="public">
+      <parameter name="address" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Http\Middleware\RedirectIfAuthenticated" namespace="App\Http\Middleware" name="RedirectIfAuthenticated" abstract="false" final="false" start="8" end="26">
+  <file path="E:/GitHub/jane-DeMixer/demixer/app/Http/Middleware" file="RedirectIfAuthenticated.php" realpath="E:/GitHub/jane-DeMixer/demixer/app/Http/Middleware/RedirectIfAuthenticated.php" size="523" time="2019-09-09T12:10:56+00:00" unixtime="1568031056" sha1="99e1fc9d7e220277912272b3998b2410742308d7" relative="Http/Middleware/RedirectIfAuthenticated.php"/>
+  <method name="handle" start="18" end="25" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Handle an incoming request."/>
+      <param type="object" variable="$request">
+        <type full="\Illuminate\Http\Request" namespace="\Illuminate\Http" name="Request"/>
+      </param>
+      <param type="object" variable="$next">
+        <type full="\Closure" namespace="" name="Closure"/>
+      </param>
+      <param type="object" variable="$guard">
+        <type full="App\Http\Middleware\string|null" namespace="App\Http\Middleware" name="string|null"/>
+      </param>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="request" byreference="false" type="{unknown}"/>
+    <parameter name="next" byreference="false" type="object">
+      <type full="Closure" namespace="" name="Closure"/>
+    </parameter>
+    <parameter name="guard" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+</class>
