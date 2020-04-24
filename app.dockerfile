@@ -14,3 +14,4 @@ RUN cp  .env.example .env
 RUN php artisan key:generate
 RUN php artisan config:cache
 RUN php artisan view:clear
+EXPOSE 9000
