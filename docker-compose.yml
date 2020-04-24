@@ -7,14 +7,26 @@ services:
       context: ./
       dockerfile: app.dockerfile
     working_dir: /var/www
-  
-  #Webserver    
+    container_name: demix-app
+#    environment:
+#      - "VIRTUAL_HOST=${DEMIXER_VIRTUAL_HOST}"
+#      - "LETSENCRYPT_HOST=${DEMIXER_VIRTUAL_HOST}"
+#      - "LETSENCRYPT_EMAIL="
+
+
+  #Webserver
   web:
     build:
       context: ./
       dockerfile: web.dockerfile
     working_dir: /var/www
     volumes:
-      - ./demixer:/var/www      
+      - ./demixer:/var/www
     ports:
-      - 8080:80
+      - ${HTTP_PORT}:80
+    container_name: demix-webproxy
+
+networks:
+  default:
+    external:
+      name: ${NETWORK}
