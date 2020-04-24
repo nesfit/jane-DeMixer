@@ -22,14 +22,16 @@ class TarzanClient extends ClusteringClient
     }
 
     public function getRequestURL($address, $request) {
-        return 'http://147.229.14.102/rest/' . $this->currency . '/mix/' . $address . '/' . $request;
+        $cluster_client = config('demix.cluster_client');
+        //dd("$cluster_client/$this->currency/mix/$address/$request");
+        return "$cluster_client/$this->currency/mix/$address/$request";
     }
 
     public function getClusterInfo($address) {
         $addrlist = $this->getClusterAddresses($address);
         $txinlist = $this->getClusterInTxs($address);
         $txoutlist = $this->getClusterOutTxs($address);
-        
+
         return new ClusterInfo ($addrlist, $txinlist, $txoutlist);
     }
 

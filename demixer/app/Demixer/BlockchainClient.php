@@ -23,9 +23,19 @@ class BlockchainClient
     }
     
     public function getRequestURL($currency) {
+        $btc_user = config('demix.btc_user');
+        $btc_pass = config('demix.btc_pass');
+        $btc_host = config('demix.btc_host');
+        $btc_port = config('demix.btc_port');
+
+        $ltc_user = config('demix.ltc_user');
+        $ltc_pass = config('demix.ltc_pass');
+        $ltc_host = config('demix.ltc_host');
+        $ltc_port = config('demix.ltc_port');
+
         switch ($currency) {
-            case 'btc': return 'http://bitcoin:local321@bexp.fit.vutbr.cz:10001';
-            case 'ltc': return 'http://bitcoin:local321@bexp.fit.vutbr.cz:10002';
+            case 'btc': return "http://$btc_user:$btc_pass@$btc_host:$btc_port";
+            case 'ltc': return "http://$ltc_user:$ltc_pass@$ltc_host:$ltc_port";
             default: return "";
         };
     }
