@@ -8,9 +8,9 @@ This application is one of the modules of the JANE platform, which offers variou
 
 * [sMaSheD](https://github.com/kvetak/sMaSheD/) - tracks IP addresses and ports of well-known mining services. It also records the availability of mining service on;
 * [Cryptoalarm](https://github.com/nesfit/jane-cryptoalarm/) - sends email/REST notifications triggered by the appearance of cryptocurrency address in new transactions;
-* [DeMixer](https://github.com/nesfit/jane-DeMixer/) - DeMixer applies proof-of-concept heuristic (working on BestMixer.io cluster), which can correlate incoming and outgoing transactions going via mixing services.
-* [Cryptoclients](https://github.com/nesfit/jane-cryptoclients/) - Blockbook web-application offers generic blockchain explorer supporting major cryptocurrencies (e.g., BTC, ETH, LTS, DASH, ZCASH). 
-* [Toreator](https://github.com/nesfit/toreator-ui) - stores metadata about Tor relays including IP addresses, capabilities and time when they were active
+* [DeMixer](https://github.com/nesfit/jane-DeMixer/) - DeMixer applies proof-of-concept heuristic (working on BestMixer.io cluster), which can correlate incoming and outgoing transactions going via mixing services;
+* [Cryptoclients](https://github.com/nesfit/jane-cryptoclients/) - Blockbook web-application offers generic blockchain explorer supporting major cryptocurrencies (e.g., BTC, ETH, LTS, DASH, ZCASH);
+* [Toreator](https://github.com/nesfit/toreator-ui) - stores metadata about Tor relays including IP addresses, capabilities and time when they were active;
 * [MozArch](https://github.com/nesfit/mozarch/) - MozArch is web-application that periodically downloads, parses, decodes, and archives (in the MAFF) webpages appearing on the public Internet.
 
 JANE and its modules are outcomes of the [TARZAN project](https://www.fit.vut.cz/research/project/1063/.en) supported by the [Ministry of the Interior of the Czech Republic](https://www.mvcr.cz). Coin DeMixer was developed in the frame of the [master thesis of Matyáš Anton](https://www.vutbr.cz/en/students/final-thesis/detail/121966?zp_id=121966) supervised by [Vladimír Veselý](https://www.fit.vut.cz/person/veselyv/) in 2019.
@@ -104,7 +104,7 @@ LTC_CORE_PASSWORD=<Litecoin client RPC password>
 
 ## User manual
 ### Heuristic
-The heuristic works with the premise that mixing service operator (such as BestMixer.io) uses a single waller (i.e., cluster of addresses) to handle cryptocurrency assets. This means that for any incoming transaction (i.e., mixing service user depositing assets for laundering) to the cluster, there exist one or more subsequent outgoing transactions from that same cluster returning tumbled cryptocurrencies (back to the user). Outgoing transaction(s) should satisfy the following conditions:
+The heuristic works with the premise that mixing service operator (such as BestMixer.io) uses a single wallet (i.e., cluster of addresses) to handle cryptocurrency assets. This means that for any incoming transaction (i.e., mixing service user depositing assets for laundering) to the cluster, there exist one or more subsequent outgoing transactions from that same cluster returning tumbled cryptocurrencies (back to the user). Outgoing transaction(s) should satisfy the following conditions:
 
 * to have the same value as incoming transaction minus blockchain and operator's fee
 * to happen later than the incoming transaction but no later than service mixing upper bound limit
@@ -120,13 +120,20 @@ c) output value for any address satisfying b) equals to **_v_** &ndash;
  **_fee_**, where **_fee_** is in the range of acceptable fees as announced by mixing service
 
 ### User stories
-DeMixer is a web application that does not need any authorized user access. DeMixer page consists of the following views:
-* _Basic search_
-* _Advanced search_
-* _Search results_
+DeMixer is a web application that does not need any authorized user access. DeMixer consists of the following views:
+* _Basic search_ - takes incoming/outgoing transaction identifier and tries to find transactions with a corresponding value using default BestMixer.io settings (**_dmax_** equal to 72 hours, **_fee_** in the range 1-4% including 0.0004 BTC transaction/miner fee).
+* _Advanced search_ - offers further customization of heuristic parameters: a) the range of minimum/maximum service operator fees; b) the range of minimum/maximum blockchain transaction fees; and c) the time range for transaction list window
+* _Search results_ - displays a list of transactions matched by heuristic algorithm.
 
+### Operation
+When using _Basic search_, the user inputs transaction id and marks this transaction as incoming/outgoing. Then the user may select mixing heuristic (by default the same as BestMixer.io was using, which is described above) and cluster provider (by default Tarzan). User then clicks on `Search` button and waits for results.
+
+When using _Advanced search_, the user customizes all inputs of demixing heuristics and submits using `Search`. 
+
+_Search results_ page displays possible candidates (i.e., transactions). Each candidate contains highlighted address that matched heuristics. Candidates may contain more than one transaction and in that case sum of all highligted address corresponds to the input value.
+
+### Testing
 In order to have ground truth and validate Coin DeMixer heuristics, we have conducted our own attempts to mix our cryptocurrency assets using BestMixer.io. We have sent to BestMixer.io three transactions:
-
 
 | TX #1 Property | Value |
 | --- | --- |
@@ -160,12 +167,6 @@ In order to have ground truth and validate Coin DeMixer heuristics, we have cond
 | Deposited amount | 0.0015 BTC |
 | Fee | 2% |
 | Time | 27.1.2019 20:12 |
-
-
-_Basic search_ takes incoming/outgoing transaction identifier and tries to find transactions with a corresponding value using default BestMixer.io settings (**_dmax_** up to 72 hours, **_fee_** in the range 1-4% including 0.0004 BTC transaction/miner fee).
-
-_Advanced search_ offers further customization of heuristic parameters:
-** 
 
 ## Programmer's documentation
 The programmer's documentation for DeMixer is autogenerated with the help of phpDox. This documentation is available statically in `docs` [folder](https://github.com/nesfit/jane-DeMixer/tree/master/demixer/docs). Moreover, for your convenience, it is also [available online](https://jane.nesad.fit.vutbr.cz/docs/demixer/index.xhtml) through JANE's [landing page](https://github.com/nesfit/jane-splashscreen/).
