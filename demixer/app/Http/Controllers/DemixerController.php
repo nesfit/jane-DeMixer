@@ -21,6 +21,7 @@ class DemixerController extends Controller
 {   
 
     public function findMatchingTransactions(Request $request) {
+       
 
         /* Removing potential trailing spaces from input*/
         $txid = trim($request->input('transaction_id'));
