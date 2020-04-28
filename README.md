@@ -30,7 +30,7 @@ Coin DeMixer is a web application written in PHP with the help of the Laravel fr
 * Guzzle 6.3
 
 ## Installation guideline
-Coin DeMixer web application source codes are available in the followin [GitHub repository folder](https://github.com/nesfit/jane-DeMixer/tree/master/demixer). Deployment of JANE DeMixer module can be cloned via [Git repositry](https://github.com/nesfit/jane-DeMixer.git).
+Coin DeMixer web application source codes are available in the followin [GitHub repository folder](https://github.com/nesfit/jane-DeMixer/tree/master/demixer). Deployment of JANE DeMixer module can be cloned via [Git repository](https://github.com/nesfit/jane-DeMixer.git).
 
 ### Prerequisites
 All JANE modules run as containerized microservices. Therefore, the production environment is the same for all of them. JANE uses Docker for containerization. We expect that JANE containers can operate on any containerization solution compatible with Docker (such as Podman).
@@ -128,9 +128,15 @@ DeMixer is a web application that does not need any authorized user access. DeMi
 ### Operation
 When using _Basic search_, the user inputs transaction id and marks this transaction as incoming/outgoing. Then the user may select mixing heuristic (by default the same as BestMixer.io was using, which is described above) and cluster provider (by default Tarzan). User then clicks on `Search` button and waits for results.
 
+![Basic search](https://raw.githubusercontent.com/nesfit/jane-DeMixer/master/demixer/docs/demix-basic.png)
+
 When using _Advanced search_, the user customizes all inputs of demixing heuristics and submits using `Search`. 
 
+![Advanced search](https://raw.githubusercontent.com/nesfit/jane-DeMixer/master/demixer/docs/demix-advanced.png)
+
 _Search results_ page displays possible candidates (i.e., transactions). Each candidate contains highlighted address that matched heuristics. Candidates may contain more than one transaction and in that case sum of all highligted address corresponds to the input value.
+
+![Search results](https://raw.githubusercontent.com/nesfit/jane-DeMixer/master/demixer/docs/demix-results.png)
 
 ### Testing
 In order to have ground truth and validate Coin DeMixer heuristics, we have conducted our own attempts to mix our cryptocurrency assets using BestMixer.io. We have sent to BestMixer.io three transactions:
