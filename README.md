@@ -15,12 +15,12 @@ This application is one of the modules of the JANE platform, which offers variou
 
 JANE and its modules are outcomes of the [TARZAN project](https://www.fit.vut.cz/research/project/1063/.en) supported by the [Ministry of the Interior of the Czech Republic](https://www.mvcr.cz). Coin DeMixer was developed in the frame of the [master thesis of Matyáš Anton](https://www.vutbr.cz/en/students/final-thesis/detail/121966?zp_id=121966) supervised by [Vladimír Veselý](https://www.fit.vut.cz/person/veselyv/) in 2019.
 
- ## Goal
+### Goal
 The primary motivation behind DeMixer's development was a necessity to address cryptocurrency tumbling as a predominant obfuscation technique when laundering assets connected with criminal activity.
 
 DeMixer takes incoming/outgoing Bitcoin transactions processed by BestMixer.io as input and guesses corresponding outgoing/incoming transactions based on value, service and transaction fees, and time window.
 
-## Technologies
+### Technologies
 DeMixer queries official cryptocurrency client (such as Bitcoin Core available as [another JANE module](https://github.com/nesfit/jane-cryptoclients/)) via RPC. DeMixer works with clustering data provided either by [WalletExplorer](https://www.walletexplorer.com/) web application or own clustering system (through defined API).
 
 Coin DeMixer is a web application written in PHP with the help of the Laravel framework and Guzzle HTTP client:
