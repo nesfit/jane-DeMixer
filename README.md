@@ -61,11 +61,11 @@ systemctl enable docker
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
+cp /usr/local/bin/docker-compose /sbin/docker-compose
 ```
 
 7. install Docker add-on which allows to specify destinations for dynamically created volumes
 ```
-cp /usr/local/bin/docker-compose /sbin/docker-compose
 curl -fsSL https://raw.githubusercontent.com/MatchbookLab/local-persist/master/scripts/install.sh | sudo bash
 ```
 
