@@ -2,7 +2,7 @@ version: '3'
 services:
 
   #App
-  app:
+  demix-app:
     build:
       context: ./
       dockerfile: app.dockerfile
@@ -14,12 +14,12 @@ services:
       - ./demixer/.env:/var/www/.env
       - web_data:/var/www
   #Webserver
-  web:
+  demix-nginx:
 #    build:
 #      context: ./
 #      dockerfile: web.dockerfile
-    image: nginx:1.10
-    container_name: demix-webproxy
+    image: nginx:alpine-perl
+    container_name: demix-nginx
     working_dir: /var/www
     volumes:
       - web_data:/var/www
